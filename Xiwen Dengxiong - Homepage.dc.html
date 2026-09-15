@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Xiwen Dengxiong — Human-Robot Collaboration &amp; AR Teleoperation</title>
+<link rel="stylesheet" href="_ds/industry-2ca03eee-2361-434e-8067-cf2e68221578/styles.css" />
+<script src="_ds/industry-2ca03eee-2361-434e-8067-cf2e68221578/_ds_bundle.js"></script>
+<style>
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body { margin: 0; background: var(--color-bg); color: var(--color-text); font-family: var(--font-body); text-wrap: pretty; }
+  a { color: var(--color-accent-700); text-decoration: none; }
+  a:hover { color: var(--color-accent-900); text-decoration: underline; }
+</style>
+</helmet>
+
+<nav class="nav" style="position: sticky; top: 0; z-index: 20; flex-wrap: wrap; gap: 8px 18px; background: var(--color-bg); border-bottom: 1px solid var(--color-divider); padding: 10px clamp(20px, 5vw, 72px);">
+  <span class="nav-brand" style="letter-spacing: 0.02em; text-transform: uppercase; font-size: 19px;">Xiwen Dengxiong</span>
+  <a href="#bio">Bio</a>
+  <a href="#news">News</a>
+  <a href="#experience">Experience</a>
+  <a href="#papers">Publications</a>
+  <a href="#videos">Demos</a>
+  <a class="btn btn-primary" href="assets/Xiwen_Dengxiong_CV.pdf" target="_blank" rel="noopener" style="color: var(--color-bg);">Curriculum vitae</a>
+</nav>
+
+<div style="max-width: 1180px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 72px);">
+
+  <section style="display: flex; flex-wrap: wrap; gap: 48px clamp(32px, 6vw, 88px); align-items: flex-start; padding: clamp(40px, 7vw, 96px) 0 72px;">
+    <div style="flex: 1 1 340px; min-width: 0;">
+      <h1 style="font-family: var(--font-heading); font-weight: 600; font-size: clamp(44px, 6.4vw, 88px); line-height: 1.04; letter-spacing: 0.01em; text-transform: uppercase; margin: 0 0 0 -0.052em;">
+        <span style="display: block;">Xiwen</span>
+        <span style="display: block;">Dengxiong</span>
+      </h1>
+      <p style="font-family: var(--font-heading); font-size: 26px; line-height: 30px; letter-spacing: 0.06em; color: color-mix(in srgb, var(--color-text) 62%, transparent); margin: 12px 0 0;">邓熊希文</p>
+      <p style="font-size: 17px; line-height: 26px; max-width: 46ch; margin: 24px 0 0;">Ph.D. in Computing and Information Sciences, working on human-robot collaboration, AR-based teleoperation and robot learning. I believe multi-dimensional interaction with intelligent robots is the future.</p>
+      <div style="display: grid; gap: 4px; font-size: 14px; line-height: 22px; color: color-mix(in srgb, var(--color-text) 78%, transparent); margin-top: 24px;">
+        <span>Golisano College of Computing and Information Sciences</span>
+        <span>Rochester Institute of Technology</span>
+        <span>Room 1070, 74 Lomb Memorial Drive, Rochester, NY 14623, USA</span>
+        <a href="mailto:dengxiongxiwen@gmail.com">dengxiongxiwen@gmail.com</a>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px;">
+        <a class="btn btn-primary" href="assets/Xiwen_Dengxiong_CV.pdf" target="_blank" rel="noopener" style="color: var(--color-bg);">Download CV</a>
+        <a class="btn btn-secondary" href="https://scholar.google.com/citations?user=_KNAz5kAAAAJ&amp;hl=en" target="_blank" rel="noopener" style="color: var(--color-text);">Google Scholar</a>
+        <a class="btn btn-secondary" href="https://github.com/SherwinDengxiong" target="_blank" rel="noopener" style="color: var(--color-text);">GitHub</a>
+        <a class="btn btn-secondary" href="https://www.linkedin.com/in/xiwen-dengxiong-085295183/" target="_blank" rel="noopener" style="color: var(--color-text);">LinkedIn</a>
+        <a class="btn btn-secondary" href="https://www.youtube.com/@cdimelabs6965" target="_blank" rel="noopener" style="color: var(--color-text);">YouTube</a>
+      </div>
+    </div>
+    <figure class="blueprint" style="flex: 0 1 260px; margin: 0; overflow: visible; align-self: flex-start;">
+      <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+      <div style="position: relative; overflow: hidden;">
+        <img src="images/sherwin.jpg" alt="Portrait of Xiwen Dengxiong" style="width: 100%; height: auto; display: block;" />
+        <sc-if value="{{ steelPortrait }}" hint-placeholder-val="{{ true }}">
+          <span style="position: absolute; inset: 0; pointer-events: none; background: var(--color-accent); mix-blend-mode: color;"></span>
+        </sc-if>
+      </div>
+    </figure>
+  </section>
+
+  <section id="bio" style="padding: 0 0 72px;">
+    <span style="display: block; font-size: 13px; line-height: 12px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-700); font-feature-settings: 'tnum' 1; margin: 0 0 12px;">01 · Biography</span>
+    <hr style="height: 1px; border: 0; margin: 0 0 24px; background: var(--color-divider);" />
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px 48px; max-width: 980px;">
+      <p style="font-size: 16px; line-height: 26px; margin: 0;">I received my Ph.D. from the Department of Computing &amp; Information Sciences, Rochester Institute of Technology, USA, in 2026, advised by <a href="https://www.willyunbozhang.com" target="_blank" rel="noopener">Dr. Yunbo Zhang</a>. Before that I received an M.S. in the Department of Computer Science at RIT in August 2021, advised by <a href="https://www.egr.msu.edu/~yukong/" target="_blank" rel="noopener">Dr. Yu Kong</a>, and a B.S. from the School of Science, Qingdao University of Technology, China, in July 2019.</p>
+      <p style="font-size: 16px; line-height: 26px; margin: 0;">My research interests encompass human-robot collaboration, open-set recognition, robot learning, AR-based teleoperation systems, tactile sensing, and their applications in computer vision tasks. I believe that multi-dimensional interaction with intelligent robots is the future.</p>
+    </div>
+  </section>
+
+  <section id="news" style="padding: 0 0 72px;">
+    <span style="display: block; font-size: 13px; line-height: 12px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-700); font-feature-settings: 'tnum' 1; margin: 0 0 12px;">02 · News</span>
+    <hr style="height: 1px; border: 0; margin: 0 0 24px; background: var(--color-divider);" />
+    <div style="display: grid; gap: 14px; max-width: 900px; font-size: 15px; line-height: 24px;">
+      <div style="display: grid; grid-template-columns: 62px 1fr; gap: 16px; align-items: baseline;">
+        <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.06em; color: var(--color-accent-700); font-feature-settings: 'tnum' 1;">07/2026</span>
+        <span>Best Student Paper Finalist, CASE 2026.</span>
+      </div>
+      <div style="display: grid; grid-template-columns: 62px 1fr; gap: 16px; align-items: baseline;">
+        <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.06em; color: var(--color-accent-700); font-feature-settings: 'tnum' 1;">06/2026</span>
+        <span>Joined <a href="https://www.realhand.com/" target="_blank" rel="noopener">Realhand</a> as a Research Scientist.</span>
+      </div>
+      <div style="display: grid; grid-template-columns: 62px 1fr; gap: 16px; align-items: baseline;">
+        <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.06em; color: var(--color-accent-700); font-feature-settings: 'tnum' 1;">05/2026</span>
+        <span>Best Paper Award, IDETC VARE 2026.</span>
+      </div>
+      <div style="display: grid; grid-template-columns: 62px 1fr; gap: 16px; align-items: baseline;">
+        <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.06em; color: var(--color-accent-700); font-feature-settings: 'tnum' 1;">10/2025</span>
+        <span>Delivered live demos on AR-based robot teleoperation and data collection to Dr. Yonghui Wu and leading robotics startups (Skild AI, Rhoda AI, RobotEra, Galaxea).</span>
+      </div>
+      <div style="display: grid; grid-template-columns: 62px 1fr; gap: 16px; align-items: baseline;">
+        <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.06em; color: var(--color-accent-700); font-feature-settings: 'tnum' 1;">08/2025</span>
+        <span>Serving as contributor of the <a href="https://github.com/XR-Robotics" target="_blank" rel="noopener">XRoboToolkit</a> project at TikTok, PICO.</span>
+      </div>
+      <div style="display: grid; grid-template-columns: 62px 1fr; gap: 16px; align-items: baseline;">
+        <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.06em; color: var(--color-accent-700); font-feature-settings: 'tnum' 1;">06/2025</span>
+        <span>One paper accepted to <a href="https://2025.ieeecase.org" target="_blank" rel="noopener">CASE 2025</a>. <a href="https://www.youtube.com/watch?v=BPrWFmKhwG8" target="_blank" rel="noopener">[Video]</a></span>
+      </div>
+      <sc-if value="{{ newsOpen }}" hint-placeholder-val="{{ true }}">
+        <div style="display: grid; gap: 14px;">
+          <div style="display: grid; grid-template-columns: 62px 1fr; gap: 16px; align-items: baseline;">
+            <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.06em; color: var(--color-accent-700); font-feature-settings: 'tnum' 1;">05/2025</span>
+            <span>Joined <a href="https://lifeattiktok.com/" target="_blank" rel="noopener">TikTok PICO</a> as a Fall Intern.</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 62px 1fr; gap: 16px; align-items: baseline;">
+            <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.06em; color: var(--color-accent-700); font-feature-settings: 'tnum' 1;">04/2025</span>
+            <span>Joined <a href="https://www.linkedin.com/company/touchtronix/posts/" target="_blank" rel="noopener">TouchTronix Robotics</a> as a Summer Intern.</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 62px 1fr; gap: 16px; align-items: baseline;">
+            <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.06em; color: var(--color-accent-700); font-feature-settings: 'tnum' 1;">03/2025</span>
+            <span>Serving as reviewer for <a href="https://www.iros25.org/" target="_blank" rel="noopener">IROS 2025</a> and <a href="https://spmconf2025.github.io/SPM2025/" target="_blank" rel="noopener">SPM 2025</a>.</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 62px 1fr; gap: 16px; align-items: baseline;">
+            <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.06em; color: var(--color-accent-700); font-feature-settings: 'tnum' 1;">11/2024</span>
+            <span>Serving as an organizer for the <a href="https://spmconf2025.github.io/" target="_blank" rel="noopener">Symposium on Solid and Physical Modeling (SPM) 2025</a>.</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 62px 1fr; gap: 16px; align-items: baseline;">
+            <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.06em; color: var(--color-accent-700); font-feature-settings: 'tnum' 1;">09/2024</span>
+            <span>Serving as reviewer for <a href="https://2025.ieee-icra.org/" target="_blank" rel="noopener">ICRA 2025</a>.</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 62px 1fr; gap: 16px; align-items: baseline;">
+            <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.06em; color: var(--color-accent-700); font-feature-settings: 'tnum' 1;">03/2024</span>
+            <span>Received an <a href="https://2024.ieee-icra.org/" target="_blank" rel="noopener">ICRA 2024</a> travel award.</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 62px 1fr; gap: 16px; align-items: baseline;">
+            <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.06em; color: var(--color-accent-700); font-feature-settings: 'tnum' 1;">10/2023</span>
+            <span>One paper accepted to <a href="https://2024.ieee-icra.org/" target="_blank" rel="noopener">ICRA 2024</a>. <a href="https://www.youtube.com/watch?v=mcrLj-tX90s" target="_blank" rel="noopener">[Video]</a> <a href="https://github.com/SherwinDengxiong/contrastive_ICRA24" target="_blank" rel="noopener">[Code]</a></span>
+          </div>
+          <div style="display: grid; grid-template-columns: 62px 1fr; gap: 16px; align-items: baseline;">
+            <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.06em; color: var(--color-accent-700); font-feature-settings: 'tnum' 1;">10/2022</span>
+            <span>One paper accepted to <a href="https://wacv2023.thecvf.com/home" target="_blank" rel="noopener">WACV 2023</a>.</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 62px 1fr; gap: 16px; align-items: baseline;">
+            <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.06em; color: var(--color-accent-700); font-feature-settings: 'tnum' 1;">08/2022</span>
+            <span>Joined the C-DIME lab, supervised by <a href="https://www.rit.edu/directory/ywzeie-yunbo-zhang" target="_blank" rel="noopener">Dr. Yunbo Zhang</a>.</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 62px 1fr; gap: 16px; align-items: baseline;">
+            <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.06em; color: var(--color-accent-700); font-feature-settings: 'tnum' 1;">06/2022</span>
+            <span>Serving as reviewer for <a href="https://2022.acmmm.org" target="_blank" rel="noopener">ACM MM 2022</a>.</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 62px 1fr; gap: 16px; align-items: baseline;">
+            <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.06em; color: var(--color-accent-700); font-feature-settings: 'tnum' 1;">08/2021</span>
+            <span>Started my PhD at RIT.</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 62px 1fr; gap: 16px; align-items: baseline;">
+            <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.06em; color: var(--color-accent-700); font-feature-settings: 'tnum' 1;">06/2021</span>
+            <span>One paper accepted to <a href="https://www.ijcnn.org/competition-ijcnn-2021" target="_blank" rel="noopener">IJCNN 2021</a>, and serving as reviewer for <a href="https://2021.acmmm.org" target="_blank" rel="noopener">ACM MM 2021</a>.</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 62px 1fr; gap: 16px; align-items: baseline;">
+            <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.06em; color: var(--color-accent-700); font-feature-settings: 'tnum' 1;">06/2020</span>
+            <span>Joined the Action Lab as a student researcher.</span>
+          </div>
+        </div>
+      </sc-if>
+    </div>
+    <button type="button" class="btn btn-secondary" onClick="{{ toggleNews }}" style="margin-top: 24px; color: var(--color-text);">{{ newsToggleLabel }}</button>
+  </section>
+
+  <section id="experience" style="padding: 0 0 72px;">
+    <span style="display: block; font-size: 13px; line-height: 12px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-700); font-feature-settings: 'tnum' 1; margin: 0 0 12px;">03 · Experience</span>
+    <hr style="height: 1px; border: 0; margin: 0 0 8px; background: var(--color-divider);" />
+    <div style="display: grid;">
+      <div style="display: flex; flex-wrap: wrap; gap: 16px 32px; align-items: center; justify-content: space-between; padding: 16px 0; border-bottom: 1px solid color-mix(in srgb, var(--color-text) 8%, transparent);">
+        <div style="flex: 1 1 320px; min-width: 0;">
+          <h3 style="font-size: 22px; line-height: 26px; letter-spacing: 0.02em; margin: 0 0 6px;">Research Scientist</h3>
+          <p style="font-size: 15px; line-height: 24px; margin: 0;"><a href="https://www.realhand.com/" target="_blank" rel="noopener">Realhand</a> · working on Physical Agent</p>
+          <p style="font-size: 13px; line-height: 22px; letter-spacing: 0.04em; text-transform: uppercase; color: color-mix(in srgb, var(--color-text) 70%, transparent); margin: 4px 0 0;">June 2026 – present</p>
+        </div>
+        <div style="display: flex; align-items: center; gap: 16px; flex: none;">
+          <span class="tag tag-accent">Current</span>
+          <img src="images/realhand.png" alt="Realhand" style="height: 26px; width: auto;" />
+        </div>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 16px 32px; align-items: center; justify-content: space-between; padding: 16px 0; border-bottom: 1px solid color-mix(in srgb, var(--color-text) 8%, transparent);">
+        <div style="flex: 1 1 320px; min-width: 0;">
+          <h3 style="font-size: 22px; line-height: 26px; letter-spacing: 0.02em; margin: 0 0 6px;">AR &amp; Robotics Intern</h3>
+          <p style="font-size: 15px; line-height: 24px; margin: 0;"><a href="https://lifeattiktok.com/" target="_blank" rel="noopener">TikTok PICO</a> · 1199 Coleman Avenue, San Jose, CA</p>
+          <p style="font-size: 13px; line-height: 22px; letter-spacing: 0.04em; text-transform: uppercase; color: color-mix(in srgb, var(--color-text) 70%, transparent); margin: 4px 0 0;">August 2025 – December 2025</p>
+        </div>
+        <img src="images/TikTok-logo.png" alt="TikTok" style="height: 44px; width: auto; flex: none;" />
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 16px 32px; align-items: center; justify-content: space-between; padding: 16px 0; border-bottom: 1px solid color-mix(in srgb, var(--color-text) 8%, transparent);">
+        <div style="flex: 1 1 320px; min-width: 0;">
+          <h3 style="font-size: 22px; line-height: 26px; letter-spacing: 0.02em; margin: 0 0 6px;">Robotics Intern</h3>
+          <p style="font-size: 15px; line-height: 24px; margin: 0;"><a href="https://www.linkedin.com/company/touchtronix/posts/" target="_blank" rel="noopener">TouchTronix Robotics</a> · Baird Research Park, Buffalo, NY</p>
+          <p style="font-size: 13px; line-height: 22px; letter-spacing: 0.04em; text-transform: uppercase; color: color-mix(in srgb, var(--color-text) 70%, transparent); margin: 4px 0 0;">April 2025 – June 2025</p>
+        </div>
+        <img src="images/touchtronix_logo.jpeg" alt="TouchTronix Robotics" style="height: 52px; width: auto; flex: none;" />
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 16px 32px; align-items: center; justify-content: space-between; padding: 16px 0; border-bottom: 1px solid color-mix(in srgb, var(--color-text) 8%, transparent);">
+        <div style="flex: 1 1 320px; min-width: 0;">
+          <h3 style="font-size: 22px; line-height: 26px; letter-spacing: 0.02em; margin: 0 0 6px;">Research Assistant</h3>
+          <p style="font-size: 15px; line-height: 24px; margin: 0;"><a href="https://www.willyunbozhang.com/" target="_blank" rel="noopener">Toyota Production Lab</a> · Rochester Institute of Technology</p>
+          <p style="font-size: 13px; line-height: 22px; letter-spacing: 0.04em; text-transform: uppercase; color: color-mix(in srgb, var(--color-text) 70%, transparent); margin: 4px 0 0;">June 2023 – March 2025</p>
+        </div>
+        <img src="images/toyota.png" alt="Toyota" style="height: 40px; width: auto; flex: none;" />
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 16px 32px; align-items: center; justify-content: space-between; padding: 16px 0; border-bottom: 1px solid color-mix(in srgb, var(--color-text) 8%, transparent);">
+        <div style="flex: 1 1 320px; min-width: 0;">
+          <h3 style="font-size: 22px; line-height: 26px; letter-spacing: 0.02em; margin: 0 0 6px;">Research Assistant</h3>
+          <p style="font-size: 15px; line-height: 24px; margin: 0;"><a href="https://www.willyunbozhang.com/" target="_blank" rel="noopener">C-DIME Lab</a> · Rochester Institute of Technology</p>
+          <p style="font-size: 13px; line-height: 22px; letter-spacing: 0.04em; text-transform: uppercase; color: color-mix(in srgb, var(--color-text) 70%, transparent); margin: 4px 0 0;">August 2022 – March 2025</p>
+        </div>
+        <img src="images/CDIME.jpg" alt="C-DIME Lab" style="height: 52px; width: auto; flex: none;" />
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 16px 32px; align-items: center; justify-content: space-between; padding: 16px 0; border-bottom: 1px solid color-mix(in srgb, var(--color-text) 8%, transparent);">
+        <div style="flex: 1 1 320px; min-width: 0;">
+          <h3 style="font-size: 22px; line-height: 26px; letter-spacing: 0.02em; margin: 0 0 6px;">Research Assistant</h3>
+          <p style="font-size: 15px; line-height: 24px; margin: 0;"><a href="https://www.rit.edu/actionlab/" target="_blank" rel="noopener">Action Lab</a> · Rochester Institute of Technology</p>
+          <p style="font-size: 13px; line-height: 22px; letter-spacing: 0.04em; text-transform: uppercase; color: color-mix(in srgb, var(--color-text) 70%, transparent); margin: 4px 0 0;">May 2020 – December 2021</p>
+        </div>
+        <img src="images/actionlab.png" alt="Action Lab" style="height: 30px; width: auto; flex: none;" />
+      </div>
+    </div>
+  </section>
+
+  <section id="papers" style="padding: 0 0 72px;">
+    <span style="display: block; font-size: 13px; line-height: 12px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-700); font-feature-settings: 'tnum' 1; margin: 0 0 12px;">04 · Publications</span>
+    <hr style="height: 1px; border: 0; margin: 0 0 32px; background: var(--color-divider);" />
+    <div style="display: grid; gap: 56px;">
+
+      <article style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px 48px; align-items: start;">
+        <div>
+          <span style="display: block; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-accent-700); margin-bottom: 8px;">CASE 2025</span>
+          <h2 style="font-size: 26px; line-height: 30px; letter-spacing: 0.01em; margin: 0 0 12px;">RoPESim: A Framework for Robot Manipulation Policy Evaluation via Simulation</h2>
+          <p style="font-size: 15px; line-height: 24px; margin: 0 0 6px;">Xueting Wang, <strong>Xiwen Dengxiong</strong>, Shi Bai, Yunbo Zhang</p>
+          <p style="font-size: 14px; line-height: 22px; font-style: italic; color: color-mix(in srgb, var(--color-text) 72%, transparent); margin: 0 0 14px;">2025 IEEE 21st International Conference on Automation Science and Engineering (CASE)</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 16px; font-size: 14px;">
+            <a href="https://www.youtube.com/watch?v=BPrWFmKhwG8" target="_blank" rel="noopener">Video</a>
+            <span style="color: color-mix(in srgb, var(--color-text) 45%, transparent);">Code coming soon</span>
+          </div>
+        </div>
+        <figure class="blueprint" style="margin: 0; overflow: visible;">
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <img src="images/CASE25-web.jpg" alt="RoPESim system figure" style="width: 100%; height: auto;" />
+        </figure>
+      </article>
+
+      <article style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px 48px; align-items: start;">
+        <div>
+          <span style="display: block; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-accent-700); margin-bottom: 8px;">ICRA 2024</span>
+          <h2 style="font-size: 26px; line-height: 30px; letter-spacing: 0.01em; margin: 0 0 12px;"><a href="https://arxiv.org/abs/2404.03067" target="_blank" rel="noopener" style="color: inherit;">Self-supervised 6-DoF Robot Grasping by Demonstration via Augmented Reality Teleoperation System</a></h2>
+          <p style="font-size: 15px; line-height: 24px; margin: 0 0 6px;"><strong>Xiwen Dengxiong</strong>, Xueting Wang, Shi Bai, Yunbo Zhang</p>
+          <p style="font-size: 14px; line-height: 22px; font-style: italic; color: color-mix(in srgb, var(--color-text) 72%, transparent); margin: 0 0 14px;">IEEE International Conference on Robotics and Automation (ICRA), Yokohama, Japan, May 2024</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 16px; font-size: 14px;">
+            <a href="https://arxiv.org/abs/2404.03067" target="_blank" rel="noopener">Paper</a>
+            <a href="https://www.youtube.com/watch?v=mcrLj-tX90s" target="_blank" rel="noopener">Video</a>
+            <a href="https://github.com/SherwinDengxiong/contrastive_ICRA24" target="_blank" rel="noopener">Code</a>
+          </div>
+        </div>
+        <figure class="blueprint" style="margin: 0; overflow: visible;">
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <img src="images/ICRA24-web.jpg" alt="AR teleoperation grasping pipeline figure" style="width: 100%; height: auto;" />
+        </figure>
+      </article>
+
+      <article style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px 48px; align-items: start;">
+        <div>
+          <span style="display: block; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-accent-700); margin-bottom: 8px;">WACV 2023</span>
+          <h2 style="font-size: 26px; line-height: 30px; letter-spacing: 0.01em; margin: 0 0 12px;"><a href="https://openaccess.thecvf.com/content/WACV2023/papers/Dengxiong_Ancestor_Search_Generalized_Open_Set_Recognition_via_Hyperbolic_Side_Information_WACV_2023_paper.pdf" target="_blank" rel="noopener" style="color: inherit;">Ancestor Search: Generalized Open Set Recognition via Hyperbolic Side Information Learning</a></h2>
+          <p style="font-size: 15px; line-height: 24px; margin: 0 0 6px;"><strong>Xiwen Dengxiong</strong>, Yu Kong</p>
+          <p style="font-size: 14px; line-height: 22px; font-style: italic; color: color-mix(in srgb, var(--color-text) 72%, transparent); margin: 0 0 14px;">Winter Conference on Applications of Computer Vision (WACV), Waikoloa, Hawaii, January 2023</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 16px; font-size: 14px;">
+            <a href="https://openaccess.thecvf.com/content/WACV2023/papers/Dengxiong_Ancestor_Search_Generalized_Open_Set_Recognition_via_Hyperbolic_Side_Information_WACV_2023_paper.pdf" target="_blank" rel="noopener">Paper</a>
+          </div>
+        </div>
+        <figure class="blueprint" style="margin: 0; overflow: visible;">
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <img src="images/wacv23-web.jpg" alt="Ancestor Search hyperbolic embedding figure" style="width: 100%; height: auto;" />
+        </figure>
+      </article>
+
+      <article style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px 48px; align-items: start;">
+        <div>
+          <span style="display: block; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-accent-700); margin-bottom: 8px;">IJCNN 2021</span>
+          <h2 style="font-size: 26px; line-height: 30px; letter-spacing: 0.01em; margin: 0 0 12px;"><a href="https://ieeexplore.ieee.org/document/9534124" target="_blank" rel="noopener" style="color: inherit;">Multiple Instance Relational Learning for Video Anomaly Detection</a></h2>
+          <p style="font-size: 15px; line-height: 24px; margin: 0 0 6px;"><strong>Xiwen Dengxiong</strong>, Wentao Bao, Yu Kong</p>
+          <p style="font-size: 14px; line-height: 22px; font-style: italic; color: color-mix(in srgb, var(--color-text) 72%, transparent); margin: 0 0 14px;">International Joint Conference on Neural Networks (IJCNN), Online, June 2021</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 16px; font-size: 14px;">
+            <a href="https://ieeexplore.ieee.org/document/9534124" target="_blank" rel="noopener">Paper</a>
+          </div>
+        </div>
+        <figure class="blueprint" style="margin: 0; overflow: visible;">
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <img src="images/IJCNN21-web.jpg" alt="Multiple instance relational learning figure" style="width: 100%; height: auto;" />
+        </figure>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="videos" style="padding: 0 0 72px;">
+    <span style="display: block; font-size: 13px; line-height: 12px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-700); font-feature-settings: 'tnum' 1; margin: 0 0 12px;">05 · Demo videos</span>
+    <hr style="height: 1px; border: 0; margin: 0 0 32px; background: var(--color-divider);" />
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px 48px;">
+      <figure style="margin: 0;">
+        <div class="blueprint" style="overflow: visible;">
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <iframe src="https://www.youtube.com/embed/BPrWFmKhwG8?rel=0" title="RoPESim: robot manipulation policy evaluation via simulation" frameborder="0" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" style="display: block; width: 100%; aspect-ratio: 16 / 9; border: 0;"></iframe>
+        </div>
+        <figcaption style="font-size: 14px; line-height: 22px; color: color-mix(in srgb, var(--color-text) 78%, transparent); margin-top: 16px;">RoPESim — policy evaluation in simulation (CASE 2025) · <a href="https://www.youtube.com/watch?v=BPrWFmKhwG8" target="_blank" rel="noopener">open on YouTube</a></figcaption>
+      </figure>
+      <figure style="margin: 0;">
+        <div class="blueprint" style="overflow: visible;">
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <iframe src="https://www.youtube.com/embed/mcrLj-tX90s?rel=0" title="Self-supervised 6-DoF robot grasping via AR teleoperation" frameborder="0" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" style="display: block; width: 100%; aspect-ratio: 16 / 9; border: 0;"></iframe>
+        </div>
+        <figcaption style="font-size: 14px; line-height: 22px; color: color-mix(in srgb, var(--color-text) 78%, transparent); margin-top: 16px;">6-DoF grasping by demonstration through AR teleoperation (ICRA 2024) · <a href="https://www.youtube.com/watch?v=mcrLj-tX90s" target="_blank" rel="noopener">open on YouTube</a></figcaption>
+      </figure>
+    </div>
+    <p style="font-size: 14px; line-height: 22px; margin: 24px 0 0;">More on the <a href="https://www.youtube.com/@cdimelabs6965" target="_blank" rel="noopener">C-DIME Labs channel</a>.</p>
+  </section>
+
+  <section id="education" style="padding: 0 0 72px;">
+    <span style="display: block; font-size: 13px; line-height: 12px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-700); font-feature-settings: 'tnum' 1; margin: 0 0 12px;">06 · Education</span>
+    <hr style="height: 1px; border: 0; margin: 0 0 32px; background: var(--color-divider);" />
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px 48px;">
+      <div class="blueprint" style="padding: 24px; overflow: visible;">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <h3 style="font-size: 22px; line-height: 26px; letter-spacing: 0.02em; text-transform: uppercase; margin: 0 0 12px;">Ph.D. Computing and Information Science</h3>
+        <p style="font-size: 15px; line-height: 24px; margin: 0;">Golisano College of Computing and Information Sciences, <a href="https://www.rit.edu" target="_blank" rel="noopener">Rochester Institute of Technology</a>, Rochester, NY, USA</p>
+        <p style="font-size: 13px; line-height: 22px; letter-spacing: 0.04em; text-transform: uppercase; color: color-mix(in srgb, var(--color-text) 70%, transparent); margin: 8px 0 0;">August 2021 – May 2026 · Advisor: <a href="https://www.willyunbozhang.com" target="_blank" rel="noopener">Prof. Yunbo Zhang</a></p>
+      </div>
+      <div class="blueprint" style="padding: 24px; overflow: visible;">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <h3 style="font-size: 22px; line-height: 26px; letter-spacing: 0.02em; text-transform: uppercase; margin: 0 0 12px;">M.S. Computer Science</h3>
+        <p style="font-size: 15px; line-height: 24px; margin: 0;">Golisano College of Computing and Information Sciences, <a href="https://www.rit.edu/computing/" target="_blank" rel="noopener">Rochester Institute of Technology</a>, Rochester, NY, USA</p>
+        <p style="font-size: 13px; line-height: 22px; letter-spacing: 0.04em; text-transform: uppercase; color: color-mix(in srgb, var(--color-text) 70%, transparent); margin: 8px 0 0;">August 2019 – August 2021</p>
+      </div>
+      <div class="blueprint" style="padding: 24px; overflow: visible;">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <h3 style="font-size: 22px; line-height: 26px; letter-spacing: 0.02em; text-transform: uppercase; margin: 0 0 12px;">B.S. Mathematics</h3>
+        <p style="font-size: 15px; line-height: 24px; margin: 0;">School of Science, <a href="http://www.qtech.edu.cn" target="_blank" rel="noopener">Qingdao University of Technology</a>, Qingdao, China</p>
+        <p style="font-size: 13px; line-height: 22px; letter-spacing: 0.04em; text-transform: uppercase; color: color-mix(in srgb, var(--color-text) 70%, transparent); margin: 8px 0 0;">September 2015 – July 2019</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="service" style="padding: 0 0 72px;">
+    <span style="display: block; font-size: 13px; line-height: 12px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-700); font-feature-settings: 'tnum' 1; margin: 0 0 12px;">07 · Awards, teaching and service</span>
+    <hr style="height: 1px; border: 0; margin: 0 0 32px; background: var(--color-divider);" />
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 32px 48px;">
+      <div>
+        <h3 style="font-size: 20px; line-height: 24px; letter-spacing: 0.04em; text-transform: uppercase; margin: 0 0 12px;">Awards</h3>
+        <p style="font-size: 15px; line-height: 24px; margin: 0 0 8px;">Best Paper Award, IDETC VARE 2026</p>
+        <p style="font-size: 15px; line-height: 24px; margin: 0 0 8px;">Best Student Paper Finalist, CASE 2026</p>
+        <p style="font-size: 15px; line-height: 24px; margin: 0;">ICRA 2024 travel award</p>
+      </div>
+      <div>
+        <h3 style="font-size: 20px; line-height: 24px; letter-spacing: 0.04em; text-transform: uppercase; margin: 0 0 12px;">Teaching</h3>
+        <p style="font-size: 15px; line-height: 24px; margin: 0;">Teaching Assistant, CSCI 631 Introduction to Computer Vision, Rochester Institute of Technology, Spring 2021</p>
+      </div>
+      <div>
+        <h3 style="font-size: 20px; line-height: 24px; letter-spacing: 0.04em; text-transform: uppercase; margin: 0 0 12px;">Academic service</h3>
+        <p style="font-size: 15px; line-height: 24px; margin: 0 0 8px;">Organizer, <a href="https://spmconf2025.github.io/" target="_blank" rel="noopener">Symposium on Solid and Physical Modeling (SPM) 2025</a></p>
+        <p style="font-size: 15px; line-height: 24px; margin: 0;">Reviewer: CVPR · ICCV · ECCV · ICLR · CoRL · ICRA 2025 · IROS 2025 · SPM 2025 · ACM MM 2021, 2022</p>
+      </div>
+    </div>
+  </section>
+
+  <footer style="display: flex; flex-wrap: wrap; gap: 24px 48px; align-items: flex-end; justify-content: space-between; padding: 40px 0 56px; border-top: 1px solid var(--color-divider); font-size: 13px; line-height: 22px; color: color-mix(in srgb, var(--color-text) 70%, transparent);">
+    <sc-if value="{{ showVisitorMap }}" hint-placeholder-val="{{ true }}">
+      <div style="flex: 0 1 320px;">
+        <span style="display: block; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-700); margin-bottom: 10px;">Visitors</span>
+        <p style="margin: 0; font-size: 13px; line-height: 22px;"><a href="https://clustrmaps.com/site/19ncr" target="_blank" rel="noopener">See the ClustrMaps visitor map</a></p>
+      </div>
+    </sc-if>
+    <div style="flex: 1 1 200px; display: flex; flex-wrap: wrap; gap: 16px 32px; align-items: flex-end; justify-content: flex-end;">
+      <p style="margin: 0; text-align: right;">Last updated on September 15, 2026<br />Published with <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a></p>
+      <sc-if value="{{ showCat }}" hint-placeholder-val="{{ true }}">
+        <img src="images/cat.gif" alt="" style="width: 80px; height: auto; flex: none;" />
+      </sc-if>
+    </div>
+  </footer>
+
+</div>
+
+<template id="__bundler_thumbnail">
+  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <rect width="100" height="100" fill="#5980a6"></rect>
+    <text x="50" y="50" fill="#f2f2f3" font-family="Barlow Condensed, sans-serif" font-size="34" font-weight="600" text-anchor="middle" dominant-baseline="central">XD</text>
+  </svg>
+</template></x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;steelPortrait&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: false, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Look&quot;},
+  &quot;newsOpen&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: false, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Content&quot;},
+  &quot;showVisitorMap&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Content&quot;},
+  &quot;showCat&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Content&quot;}
+}">
+class Component extends DCLogic {
+  state = { newsOpen: false };
+
+  renderVals() {
+    const open = this.state.newsOpen || this.props.newsOpen === true;
+    return {
+      newsOpen: open,
+      newsToggleLabel: open ? "Show recent only" : "Show all news",
+      toggleNews: () => this.setState({ newsOpen: !open }),
+      steelPortrait: this.props.steelPortrait ?? false,
+      showVisitorMap: this.props.showVisitorMap ?? true,
+      showCat: this.props.showCat ?? true,
+    };
+  }
+}
+</script>
+</body>
+</html>
